@@ -5,11 +5,17 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+#ADDED GEMS
 
+gem 'bourbon'
+#Authentication
+gem 'devise'
 #AP
-gem "awesome_print", require:"ap"
+gem 'awesome_print', require:'ap'
 #Bootstrap for Rails
-gem 'bootstrap-sass'
+gem 'bootstrap', '~> 4.0.0.alpha6'
+
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
 # Use postgresql as the database for Active Record
