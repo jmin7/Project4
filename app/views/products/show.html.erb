@@ -1,9 +1,47 @@
+<a href="/#landing-anchor" class="back-btn">
+</a>
 
-<h3><%= @product.name %></h3>
-<img src="<%= @product.photo %>" width="400px" height="350px">
+<section class="single-location">
+  <header class="single-location__hero" style="background-image: url('<%= @product.photo %>'); ">
 
-<div>
-Price : $ <%= @product.price %><br>
-Size : <%= @product.size %>
+  </header>
+  <div class="single-location__hero-inner">
+    <h1><%= @product.name %></h1>
+    <h2>Price : $ <%= @product.price %></h2>
+    <h2>Size : <%= @product.size %></h2>
+
+  </div>
+  <div class="single-location__hero-overlay"></div>
+</section>
+
+<section class="single-location">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-8">
+        <h1>Things to do in <%= @product.name %></h1>
+        <p class="text-muted mb-4">See what other people had to say about <%= @product.name %>.</p>
+        <div class="post-container">
+          <%= render @product.comments %>
+        </div>
+      </div>
+
+
+
+      <div class="col-md-4">
+        <hr class="hidden-md-up mb-4">
+
+        <%= render 'comments/form' %>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<div class="container">
+  <div class="row">
+
+  </div>
+
 </div>
-<%= link_to "Back to list", products_path %>
