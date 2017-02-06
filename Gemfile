@@ -6,6 +6,10 @@ git_source(:github) do |repo_name|
 end
 
 
+#AP
+gem "awesome_print", require:"ap"
+#Bootstrap for Rails
+gem 'bootstrap-sass'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
 # Use postgresql as the database for Active Record

@@ -1,0 +1,9 @@
+
+<h3><%= @product.name %></h3>
+<img src="<%= @product.photo %>" width="400px" height="350px">
+
+<div>
+Price : $ <%= @product.price %><br>
+Size : <%= @product.size %>
+</div>
+<%= link_to "Back to list", products_path %>
