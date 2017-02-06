@@ -8,5 +8,7 @@
 
 Product.destroy_all
 
-product1 = Product.create(name: "Cool City 11", price: 15, size: "Free", photo: "http://www.dentons.com/~/media/Images/Website/Background%20Images/Offices/Atlanta/Atlanta_2.jpg")
-product2 = Product.create(name: "Cool City 22 ", price: 25, size: "Free", photo: "http://www.dentons.com/~/media/Images/Website/Background%20Images/Offices/Atlanta/Atlanta_2.jpg")
+Product.create(name: "Cool City 11", price: 15, size: "Free", photo: "http://www.dentons.com/~/media/Images/Website/Background%20Images/Offices/Atlanta/Atlanta_2.jpg")
+Product.create(name: "Seattle", price: 30, size: "Small", photo: "http://www.bekinsmovingandstorage.com/wp-content/uploads/2016/03/SeattleCity2.jpg")
+Product.create(name: "Cool City 22 ", price: 25, size: "Free", photo: "http://www.dentons.com/~/media/Images/Website/Background%20Images/Offices/Atlanta/Atlanta_2.jpg")
+Product.create(name: "Test product", price: 100, size: "Medium", photo: "http://www.bekinsmovingandstorage.com/wp-content/uploads/2016/03/SeattleCity2.jpg")
