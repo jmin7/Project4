@@ -1,47 +1,39 @@
 <a href="/#landing-anchor" class="back-btn">
 </a>
 
-<section class="single-location">
-  <header class="single-location__hero" style="background-image: url('<%= @product.photo %>'); ">
-
+<div id="product"></div>
+<section class="each_product">
+  <header class="each_product__hero" style="background-image: url('<%= @product.photo %>'); ">
   </header>
-  <div class="single-location__hero-inner">
+  <div class="each_product__hero-inner">
     <h1><%= @product.name %></h1>
-    <h2>Price : $ <%= @product.price %></h2>
-    <h2>Size : <%= @product.size %></h2>
-
   </div>
-  <div class="single-location__hero-overlay"></div>
+
+  <div class="each_product__hero-overlay"></div>
 </section>
 
-<section class="single-location">
-  <div class="container">
-    <div class="row">
+<section class="each_product">
 
-      <div class="col-md-8">
-        <h1>Things to do in <%= @product.name %></h1>
-        <p class="text-muted mb-4">See what other people had to say about <%= @product.name %>.</p>
-        <div class="post-container">
-          <%= render @product.comments %>
+    <div class="p_body">
+      <h1><%= @product.name %></h1>
+      <h3>Price : $ <%= @product.price %></h3>
+      <h3>Size : <%= @product.size %></h3>
+      <p class="text-muted mb-4">See what other people had to say about <%= @product.name %>.</p>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="comment-container">
+            <%= render @product.comments %>
+          </div>
         </div>
-      </div>
 
 
-
-      <div class="col-md-4">
-        <hr class="hidden-md-up mb-4">
-
+      <div class="col-md-8 p_comment">
         <%= render 'comments/form' %>
       </div>
-
     </div>
   </div>
+
 </section>
-
-
-<div class="container">
-  <div class="row">
-
-  </div>
-
-</div>

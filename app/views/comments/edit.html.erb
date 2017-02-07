@@ -1,0 +1,22 @@
+<a href="/products/<%= @product.id %>" class="back-btn">
+</a>
+
+<div class="edit">
+
+<h1><%= @product.name %></h1>
+
+  <%= form_for([@product, @comment] , :html => { :class =>'form' }) do |f|  %>
+      <p>
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+      </p>
+      <p>
+        <%= f.label :body %>
+        <%= f.text_area :body %>
+      </p>
+      <p>
+        <%= f.submit %>
+      </p>
+  <% end %>
+
+</div>

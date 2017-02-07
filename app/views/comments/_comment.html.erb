@@ -1,0 +1,19 @@
+<div class="card post">
+  <div class="card-block">
+    <div class="row">
+      <div class="col-md-8">
+        <h5><%= comment.title %></h5>
+        <p><%= comment.body %></p>
+        <%= link_to 'Edit Comment', edit_product_comment_path(comment.product_id, comment.id),
+                    class: 'btn btn-sm btn-primary'%>
+      </div>
+
+      <div class="col-md-4 text-right">
+        <%= link_to 'Remove', [comment.product, comment],
+                    class: 'btn btn-sm btn-secondary',
+                    method: :delete,
+                    data: {confirm: 'Are you sure?'}%>
+      </div>
+    </div>
+  </div>
+</div>
