@@ -1,22 +1,56 @@
-<a href="/products/<%= @product.id %>" class="back-btn">
-</a>
+<a href="/" class="back-btn"></a>
 
-<div class="edit">
+<div id="product"></div>
+<section class="each_product">
+  <header class="each_product__hero" style="background-image: url('<%= @product.photo %>'); ">
+  </header>
+  <div class="each_product__hero-inner">
+    <h1><%= @product.name %></h1>
+  </div>
 
-<h1><%= @product.name %></h1>
+  <div class="each_product__hero-overlay"></div>
+</section>
 
-  <%= form_for([@product, @comment] , :html => { :class =>'form' }) do |f|  %>
-      <p>
-        <%= f.label :title %>
-        <%= f.text_field :title %>
-      </p>
-      <p>
-        <%= f.label :body %>
-        <%= f.text_area :body %>
-      </p>
-      <p>
-        <%= f.submit %>
-      </p>
-  <% end %>
+<section class="each_product">
 
-</div>
+    <div class="p_body">
+      <h1><%= @product.name %></h1>
+      <h3>Price : $ <%= @product.price %></h3>
+      <h3>Size : <%= @product.size %></h3>
+      <p class="text-muted mb-4">See what other people had to say about <%= @product.name %>.</p>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+
+          <div class="comment-container">
+            <%= render @comment %>
+
+            <div class="edit">
+              <a href="/products/<%= @product.id %>" class="back-btn"></a>
+              <%= form_for([@product, @comment] , :html => { :class =>'form' }) do |f|  %>
+                  <p>
+                    <%= f.label :title %>
+                    <%= f.text_field :title %>
+                  </p>
+                  <p>
+                    <%= f.label :body %>
+                    <%= f.text_area :body %>
+                  </p>
+                  <p>
+                    <%= f.submit %>
+                  </p>
+              <% end %>
+
+          </div>
+        </div>
+
+
+      <div class="col-md-10 p_comment">
+        <%= render 'comments/form' %>
+      </div>
+    </div>
+  </div>
+
+</section>
