@@ -1,0 +1,14 @@
+<h1>Sign Up</h1>
+
+<%= form_tag users_path do %>
+  Name :
+  <input type="text" name="name"><br>
+  Email :
+  <input type="email" name="email"><br>
+  Password :
+  <input type="password" name="password"><br>
+  Password Confirmation :
+  <input type="password" name="password_confirmation"><br>
+
+  <input type="submit" value="Sign up">
+<% end %>
