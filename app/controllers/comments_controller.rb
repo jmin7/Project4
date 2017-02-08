@@ -3,12 +3,14 @@ class CommentsController < ApplicationController
   def new
     @product = Product.find(params[:product_id])
     @comment = @product.comments.create(comment_params)
-  
+
   end
 
   def create
     @product = Product.find(params[:product_id])
     @comment = @product.comments.create(comment_params)
+    @comment.user_id = current_user.id
+    @comment.save!
 
     redirect_to product_path(@product)
   end
@@ -28,8 +30,7 @@ class CommentsController < ApplicationController
     @comment = @product.comments.find(params[:id])
 
     if @comment.update(comment_params)
-      redirect_to product_path(@comment.product_id)
-
+      redirect_to product_path(@product)
     else
       render 'edit'
     end
@@ -46,7 +47,7 @@ class CommentsController < ApplicationController
   private
 
   def comment_params
-    params.require(:comment).permit(:title, :body)
+    params.require(:comment).permit(:title, :body, :user_id, :product_id)
   end
 
 end
