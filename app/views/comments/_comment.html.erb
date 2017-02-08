@@ -7,15 +7,22 @@
 
 
       </div>
-
       <div class="col-md-4 text-right">
-        <p>Username : <%= comment.user_id %></p>
+        <p>Username : <%= comment.user.name %></p>
+
+        <% if session[:user_id] %>
+        <% if current_user.id == comment.user_id %>
+
         <%= link_to 'Edit Comment', edit_product_comment_path(comment.product_id, comment.id),
                     class: 'btn btn-sm btn-secondary'%>
         <%= link_to 'Remove', [comment.product, comment],
                     class: 'btn btn-sm btn-secondary',
                     method: :delete,
                     data: {confirm: 'Are you sure?'}%>
+        <% end %>
+        <% end %>
+
+
       </div>
     </div>
   </div>

@@ -1,3 +1,5 @@
+<div class="sign_up">
+
 <h1>Sign Up</h1>
 
 <%= form_tag users_path do %>
@@ -8,7 +10,9 @@
   Password :
   <input type="password" name="password"><br>
   Password Confirmation :
-  <input type="password" name="password_confirmation"><br>
+  <input type="password" name="password_confirmation"><br><br>
 
-  <input type="submit" value="Sign up">
+  <input class='btn btn-sm btn-secondary' type="submit" value="Sign up">
 <% end %>
+
+</div>

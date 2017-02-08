@@ -1,12 +1,15 @@
-<h1>Sign In</h1>
-<%= form_tag sessions_path do %>
-  Email :
-  <input type="email" name="email"><br>
-  Password :
-  <input type="password" name="password"><br>
+<div class="sign_in">
 
-  <input type="submit" value="Sign In">
-  <br>
-  <%= flash[:alert] %>
+  <h1>Sign In</h1>
+  <%= form_tag sessions_path do %>
+    Email :
+    <input type="email" name="email"><br>
+    Password :
+    <input type="password" name="password"><br>
 
-<% end %>
+    <input class='btn btn-sm btn-secondary' type="submit" value="Log In"><br><br>
+
+    <%= flash[:alert] %>
+  <% end %>
+
+</div>

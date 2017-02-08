@@ -27,7 +27,9 @@
   }
 }
 
-
+.nav_ {
+  font-family: 'Caveat Brush', cursive;
+}
 
  .landing {
    margin-top: 10px;
@@ -219,5 +221,16 @@ a.back-btn {
   }
   input, textarea {
     border-color: red;
+  }
+}
+
+
+.sign_in, .sign_up {
+  text-align: center;
+  h1 {
+    margin: 1.5em auto;
+  }
+  input {
+    margin: 5px;
   }
 }
