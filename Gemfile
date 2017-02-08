@@ -7,6 +7,8 @@ end
 
 #ADDED GEMS
 
+#Authorization
+gem 'cancancan'
 gem 'bourbon'
 #Authentication
 gem 'devise'

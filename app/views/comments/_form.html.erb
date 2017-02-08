@@ -1,3 +1,5 @@
+
+
 <%= form_for([@product, @product.comments.build], :html => {:class => 'form'}, validate: true) do |f| %>
 
     <h2>Tell us about <%= @product.name %>!</h2>
@@ -10,7 +12,8 @@
         <%= f.text_area :body, placeholder: "How was it?" %>
       </p>
       <p class="form-group">
-        <%= f.submit %>
+    
+         <%= f.submit %>
       </p>
 
 <% end %>

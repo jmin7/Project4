@@ -24,9 +24,12 @@
     <div class="container">
       <div class="row">
         <div class="col-md-8">
+            <%= flash[:alert] %>
+            <br>
           <div class="comment-container">
             <%= render @product.comments %>
           </div>
+
         </div>
 
 
