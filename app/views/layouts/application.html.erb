@@ -11,25 +11,37 @@
 
   <body>
 
-    <nav class="navbar navbar-default nav_">
-          <div class="container">
+<nav class="navbar navbar-default nav_">
+      <div class="container">
 
-          <div class="navbar-header">
-            <div class="navbar-brand" id="myNavbar">
-              <a href="/">| Home |</a>
-              <% if session[:user_id] %>
-              User : <%= current_user.name %> |
-              <%= link_to 'Log out |', session_path(current_user), method: 'delete' %>
-              <% else %>
-              <%= link_to 'Log in |', new_session_path %>
-              <%= link_to 'Sign up |', new_user_path %>
+      <div class="navbar-header">
+        <div class="navbar-brand" id="myNavbar">
+          <a href="/">| Home | </a>
+          <a href="/products">| Sweatshirts </a>
+          <a href="/products">| Pants </a>
+          <a href="/products">| Dress & Skirts </a>
+          <a href="/products">| Summer Wear </a>
+          <a href="/products">| Shoes |</a>
 
-              <% end %>
-
-            </div>
-          </div>
         </div>
-      </nav>
+
+        <div class="right">
+          <% if session[:user_id] %>
+          User : <%= current_user.name %> |
+          <%= link_to cart_path do%>
+           My Cart |
+         <%end%>
+          <%= link_to 'Log out |', session_path(current_user), method: 'delete' %>
+
+          <% else %>
+          <%= link_to 'Log in |', new_session_path %>
+          <%= link_to 'Sign up |', new_user_path %>
+          <% end %>
+        </div>
+
+      </div>
+    </div>
+  </nav>
 
 
     <%= yield %>

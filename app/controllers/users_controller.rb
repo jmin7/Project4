@@ -10,4 +10,9 @@ class UsersController < ApplicationController
 
     redirect_to '/'
   end
+
+  def cart_count
+  $redis.scard "cart#{id}"
+  end
+  
 end

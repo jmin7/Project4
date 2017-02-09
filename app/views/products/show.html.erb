@@ -1,5 +1,4 @@
-<a href="/" class="back-btn">
-</a>
+<a href="/products" class="back-btn"></a>
 
 <div id="product"></div>
 <section class="each_product">
@@ -18,8 +17,11 @@
       <h1><%= @product.name %></h1>
       <h3>Price : $ <%= @product.price %></h3>
       <h3>Size : <%= @product.size %></h3>
-      <p class="text-muted mb-4">See what other people had to say about <%= @product.name %>.</p>
+      <br>
+      <p class="text-muted mb-4">See details for <%= @product.name %>.</p>
     </div>
+    <center><img src='<%= @product.photo %>' height="600px" width="600px"></center>
+    <br>
 
     <div class="container">
       <div class="row">
