@@ -38,7 +38,9 @@
 
 
       <div class="col-md-8 p_comment">
+        <% if session[:user_id] %>
         <%= render 'comments/form' %>
+        <% end %>
       </div>
     </div>
   </div>
