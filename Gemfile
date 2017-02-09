@@ -7,6 +7,8 @@ end
 
 #ADDED GEMS
 
+gem 'redis', '~> 3.0.1'
+gem 'hiredis', '~> 0.4.5'
 #Authorization
 gem 'cancancan'
 gem 'bourbon'
