@@ -13,11 +13,15 @@
  *= require_self
  */
 
+ $link-hover-decoration: none;
+
  @import "bootstrap";
  @import "bourbon";
 
+// google fonts
  @import url('https://fonts.googleapis.com/css?family=Barrio|Caveat+Brush|Pacifico');
  @import url('https://fonts.googleapis.com/css?family=Righteous');
+
 
 
  html {
