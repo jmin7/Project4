@@ -17,6 +17,7 @@
  @import "bourbon";
 
  @import url('https://fonts.googleapis.com/css?family=Barrio|Caveat+Brush|Pacifico');
+ @import url('https://fonts.googleapis.com/css?family=Righteous');
 
 
  html {
@@ -35,6 +36,7 @@
 }
 
 .sign_up, .log_in {
+  font-family: 'Caveat Brush', cursive;
   text-align: center;
   margin-top: 2.5em;
   h1 {
@@ -46,21 +48,47 @@
   }
 }
 
- .landing {
+.root {
+  // background-image: url("https://image.flaticon.com/sprites/new_packs/122676-linear-color-fashion-set.png");
+  // background-image: url("http://i394.photobucket.com/albums/pp26/billybill171/red-black-white-stripes-1.jpg");
+  background-position: top;
+  background-size: contain;;
+  color: black;
+  h1, h2 {
+    font-family: 'Righteous', cursive;
+  }
+}
+
+
+.landing {
+  // background-image: url("http://st2.depositphotos.com/4060975/7687/v/950/depositphotos_76878959-stock-illustration-clothes-colored-outline-vector-icons.jpg");
+  // background-image: url("https://image.flaticon.com/sprites/new_packs/286881-clothes.png");
+  // background-image: url("http://s3.amazonaws.com/spoonflower/public/design_thumbnails/0239/3814/Stripe_Pattern_Horizontal_White_Background-02_shop_preview.png");
+  background-image: url("http://i394.photobucket.com/albums/pp26/billybill171/red-black-white-stripes-1.jpg");
+  background-position: top;
+  // background-size: cover;
+  color: black;
+  text-shadow: 4px 0 white;
+  h1 {
+    font-family: 'Barrio', cursive;
+  }
+}
+
+
+
+ .root, .landing {
    margin-top: 10px;
-   min-height: 50vh;
+   height: 30vh;
    display: flex;
    flex-direction: column;
    align-items: center;
    justify-content: center;
-   background: #5bc0de;
-   color: #ffffff;
-   margin-bottom: 1.5em;
+   margin-bottom: 2.5em;
 
    position: relative;
 
+
     h1 {
-    font-family: 'Barrio', cursive;
     font-size: 6em;
     margin-bottom: 3px;
     @include media-breakpoint-up(md) {
@@ -68,10 +96,9 @@
     }
     @include media-breakpoint-up(lg) {
     font-size: 5rem;
-    }
-    }
+    }}
+
     h2 {
-    font-family: 'Barrio', cursive;
     font-size: 3em;
     margin-bottom: 1em;
     @include media-breakpoint-up(md) {
@@ -89,6 +116,7 @@
 
         font-family: 'Caveat Brush', cursive;
         text-decoration: none;
+        text-align: center;
   }
 
 

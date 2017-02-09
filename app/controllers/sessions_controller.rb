@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       redirect_to '/'
 
     else
-      flash[:alert] = 'Invalid email or password'
+      flash[:alert] = 'Invalid email or password. Please try again'
       redirect_to new_session_path
     end
   end
