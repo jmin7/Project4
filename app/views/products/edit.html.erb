@@ -1,6 +1,6 @@
 <div class="new_product">
     <%= form_for @product do |f| %>
-    <h1>Add new product here !</h1>
+    <h1>Edit this product</h1>
 
     <p class="form-group">
         <%= f.label :name %>
@@ -18,8 +18,8 @@
         <%= f.label :photo %>
         <%= f.text_field :photo %>
     </p>
-    <p class="form-group">
-        <%= f.submit %>
+    <p class="form-group btn">
+            <%= f.submit %>
     </p>
     <% end %>
 </div>

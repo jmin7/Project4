@@ -26,17 +26,16 @@
             </div>
             <% end %>
 
+            <% if @user && @user.id == 5 %>
             <div class="col-md-4">
-              <% if @user && @user.id == 5 %>
                 <div class="card">
                     <div class="card-bg-img" style="background-image: url('https://www.nutanix.com/wp-content/uploads/2015/01/add.png');"></div>
                     <div class="card-block">
                         <p class="product_index_name_pro"><%= link_to 'Add new product', new_product_path %></p>
                     </div>
                 </div>
-                <% end %>
-
             </div>
+            <% end %>
 
         </div>
     </div>
