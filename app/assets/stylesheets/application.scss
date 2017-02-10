@@ -17,21 +17,9 @@ $link-decoration: none;
 @import "bourbon";
 // google fonts
 @import url( 'https://fonts.googleapis.com/css?family=Barrio|Caveat+Brush|Pacifico');
-@import url( 'https://fonts.googleapis.com/css?family=Economica|Righteous');
+@import url( 'https://fonts.googleapis.com/css?family=Economica|Righteous|Rock+Salt');
 
-a:link {
-    color: black;
-}
-
-a:visited {
-    color: black;
-}
-
-a:hover {
-    color: black;
-}
-
-a:active {
+a:link, a:visited, a:hover,a:active  {
     color: black;
 }
 
@@ -75,19 +63,19 @@ html {
     background-size: contain;
     color: black;
 
-    h1,
-    h2 {
+    h1, h3 {
         font-family: 'Righteous', cursive;
     }
 }
 
 .landing {
-    background-image: url("http://i394.photobucket.com/albums/pp26/billybill171/red-black-white-stripes-1.jpg");
-    background-position: top;
-    // background-size: cover;
+    // background-image: url("http://i394.photobucket.com/albums/pp26/billybill171/red-black-white-stripes-1.jpg");
+    background-image: url("https://img.clipartfox.com/dede465a18c5c7f2668da885be7194e1_gray-and-white-horizontal-black-and-white-striped-clipart_800-600.jpeg");
+
     color: black;
     text-shadow: 4px 0 white;
-
+    height: 35px;
+    
     h1 {
         font-family: 'Barrio', cursive;
     }
@@ -101,7 +89,7 @@ html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 2.5em;
+    margin-bottom: 2em;
     position: relative;
 
     h1 {
@@ -129,6 +117,13 @@ html {
 
 .card {
   margin-bottom: 10px;
+
+  .product_index_name_pro {
+    font-family: 'Rock Salt', cursive;
+    text-align: center;
+    font-size: 20px;
+    align-items: center;
+  }
 
   .product_index_name {
     font-size: 2em;

@@ -18,7 +18,7 @@
                 <div class="card">
                     <div class="card-bg-img" style="background-image: url('<%= product.photo %>');"></div>
                     <div class="card-block">
-                        <p class="product_index_name"><%= product.name %></p>
+                        <p class="product_index_name_pro"><%= product.name %></p>
                     </div>
                 </div>
                 <% end %>
@@ -27,12 +27,10 @@
 
             <div class="col-md-4">
                 <div class="card">
-                  <% if current_user.id = 5 %>
                     <div class="card-bg-img" style="background-color: white"></div>
                     <div class="card-block">
-                        <p class="product_index_name"><%= link_to 'Add new product', new_product_path %></p>
+                        <p class="product_index_name_pro"><%= link_to 'Add new product', new_product_path %></p>
                     </div>
-                    <% end %>
                 </div>
             </div>
 
