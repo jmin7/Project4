@@ -1,18 +1,18 @@
 <div class="sign_up">
-<h1>Sign Up</h1>
+    <h1>Sign Up</h1>
 
-<%= form_tag users_path do %>
-  Name :
-  <input type="text" name="name"><br>
-  Email :
-  <input type="email" name="email"><br>
-  Password :
-  <input type="password" name="password"><br>
-  Password Confirmation :
-  <input type="password" name="password_confirmation"><br>
-  <br>
-  <input class='btn btn-sm btn-secondary' type="submit" value="Sign up">
-  <br><br>
-  <%= flash[:alert] %>
-<% end %>
+    <%= form_tag users_path do %>
+    Name :
+    <input type="text" name="name"><br>
+    Email :
+    <input type="email" name="email"><br>
+    Password :
+    <input type="password" name="password"><br>
+    Password Confirmation :
+    <input type="password" name="password_confirmation"><br>
+    <br>
+    <input class='btn btn-sm btn-secondary' type="submit" value="Sign up">
+    <br><br>
+    <%= flash[:alert] %>
+    <% end %>
 </div>

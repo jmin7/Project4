@@ -12,275 +12,281 @@
  *
  *= require_self
  */
-
- $link-decoration: none;
-
- @import "bootstrap";
- @import "bourbon";
-
+$link-decoration: none;
+@import "bootstrap";
+@import "bourbon";
 // google fonts
- @import url('https://fonts.googleapis.com/css?family=Barrio|Caveat+Brush|Pacifico');
- @import url('https://fonts.googleapis.com/css?family=Righteous');
+@import url( 'https://fonts.googleapis.com/css?family=Barrio|Caveat+Brush|Pacifico');
+@import url( 'https://fonts.googleapis.com/css?family=Righteous');
 
- a:link {
-   color: black;
- }
- a:visited {
-   color: black;
- }
- a:hover {
-   color: black;
- }
- a:active {
-   color: black;
- }
+a:link {
+    color: black;
+}
 
- html {
-  position: relative;
-  font-size: 14px;
-  @include media-breakpoint-up(md) {
-    font-size: 16px;
-  }
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: black;
+}
+
+a:active {
+    color: black;
+}
+
+html {
+    position: relative;
+    font-size: 14px;
+    @include media-breakpoint-up(md) {
+        font-size: 16px;
+    }
 }
 
 .nav_ {
-  font-family: 'Caveat Brush', cursive;
-  .right {
-    float: right;
-  }
+    font-family: 'Caveat Brush', cursive;
+
+    .right {
+        float: right;
+    }
 }
 
-.sign_up, .log_in, .new_product {
-  font-family: 'Caveat Brush', cursive;
-  background-color: #FFDEAD;
-  text-align: center;
-  margin-top: 3em;
-  padding-top: 1em;
-  h1 {
-    margin-bottom: 1.5em;
-  }
-  input {
-    padding: 3px;
-    margin: 5px;
-  }
+.log_in,
+.new_product,
+.sign_up {
+    font-family: 'Caveat Brush', cursive;
+    background-color: #FFDEAD;
+    text-align: center;
+    margin-top: 3em;
+    padding-top: 1em;
+
+    h1 {
+        margin-bottom: 1.5em;
+    }
+
+    input {
+        padding: 3px;
+        margin: 5px;
+    }
 }
 
 .root {
-  // background-image: url("https://image.flaticon.com/sprites/new_packs/122676-linear-color-fashion-set.png");
-  // background-image: url("http://i394.photobucket.com/albums/pp26/billybill171/red-black-white-stripes-1.jpg");
-  background-position: top;
-  background-size: contain;;
-  color: black;
-  h1, h2 {
-    font-family: 'Righteous', cursive;
-  }
-}
+    background-position: top;
+    background-size: contain;
+    color: black;
 
+    h1,
+    h2 {
+        font-family: 'Righteous', cursive;
+    }
+}
 
 .landing {
-  // background-image: url("http://st2.depositphotos.com/4060975/7687/v/950/depositphotos_76878959-stock-illustration-clothes-colored-outline-vector-icons.jpg");
-  // background-image: url("https://image.flaticon.com/sprites/new_packs/286881-clothes.png");
-  // background-image: url("http://s3.amazonaws.com/spoonflower/public/design_thumbnails/0239/3814/Stripe_Pattern_Horizontal_White_Background-02_shop_preview.png");
-  background-image: url("http://i394.photobucket.com/albums/pp26/billybill171/red-black-white-stripes-1.jpg");
-  background-position: top;
-  // background-size: cover;
-  color: black;
-  text-shadow: 4px 0 white;
-  h1 {
-    font-family: 'Barrio', cursive;
-  }
-}
-
-
-
- .root, .landing {
-   margin-top: 10px;
-   height: 30vh;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-   margin-bottom: 2.5em;
-
-   position: relative;
-
+    background-image: url("http://i394.photobucket.com/albums/pp26/billybill171/red-black-white-stripes-1.jpg");
+    background-position: top;
+    // background-size: cover;
+    color: black;
+    text-shadow: 4px 0 white;
 
     h1 {
-    font-size: 6em;
-    margin-bottom: 3px;
-    @include media-breakpoint-up(md) {
-    font-size: 5vw;
+        font-family: 'Barrio', cursive;
     }
-    @include media-breakpoint-up(lg) {
-    font-size: 5rem;
-    }}
-
-    h2 {
-    font-size: 3em;
-    margin-bottom: 1em;
-    @include media-breakpoint-up(md) {
-      font-size: 3vw;
-    }
-    @include media-breakpoint-up(xl) {
-      font-size: 3rem;
-    }
-      }
-
-  }
-
-
-.product_index_name {
-        font-size: 2.5em;
-        font-color: black;
-        font-family: 'Caveat Brush', cursive;
-        text-decoration-style: none;
-        text-decoration: none;
-        text-align: center;
-  }
-
-
-.card-bg-img {
-background-size: cover;
-height: 12rem;
-border-top-left-radius: 5px;
-border-top-right-radius: 5px;
-background-position: center;
 }
 
-
-.each_product {
-  position: relative;
-  margin: 0 0 4rem;
-  &__hero {
-    position: relative;
-    background-size: cover;
-    background-position: center center;
-    min-height: 40vh;
-
-    filter: grayscale(50%);
-    z-index: 100;
-  }
-
-   &__hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    min-height: 40vh;
-    pointer-events: none;
-    background-image: linear-gradient(to top, #ff5b77, darken(#ff5b77, 18%));
-    opacity: .92;
-    z-index: 150;
-  }
-
-   &__hero-inner {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 200;
+.landing,
+.root {
+    margin-top: 10px;
+    height: 30vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: #FFFFFF;
-    font-family: 'Pacifico', cursive;
+    margin-bottom: 2.5em;
+    position: relative;
+
+    h1 {
+        font-size: 6em;
+        margin-bottom: 3px;
+        @include media-breakpoint-up(md) {
+            font-size: 5vw;
+        }
+        @include media-breakpoint-up(lg) {
+            font-size: 5rem;
+        }
+    }
+
     h2 {
-    max-width: 40rem;
-    margin: 0 auto;
-    text-align: center;
-  }
+        font-size: 3em;
+        margin-bottom: 1em;
+        @include media-breakpoint-up(md) {
+            font-size: 3vw;
+        }
+        @include media-breakpoint-up(xl) {
+            font-size: 3rem;
+        }
+    }
 }
+
+.product_index_name {
+    font-size: 2.5em;
+    font-color: black;
+    font-family: 'Caveat Brush', cursive;
+    text-decoration-style: none;
+    text-decoration: none;
+    text-align: center;
+}
+
+.card-bg-img {
+    background-size: cover;
+    height: 12rem;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-position: center;
+}
+
+.each_product {
+    position: relative;
+    margin: 0 0 4rem;
+
+    &__hero {
+        position: relative;
+        background-size: cover;
+        background-position: center center;
+        min-height: 40vh;
+        filter: grayscale(50%);
+        z-index: 100;
+    }
+
+    &__hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        min-height: 40vh;
+        pointer-events: none;
+        background-image: linear-gradient(to top, #ff5b77, darken(#ff5b77, 18%));
+        opacity: 0.92;
+        z-index: 150;
+    }
+
+    &__hero-inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 200;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #FFFFFF;
+        font-family: 'Pacifico', cursive;
+
+        h2 {
+            max-width: 40rem;
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
+}
+
+.product_name {
+  font-size: 3em;
 }
 
 .form {
-  label {
-    font-weight: 400;
-  }
-  input, textarea {
-    @extend .form-control;
-  }
+    label {
+        font-weight: 400;
+    }
+
+    input,
+    textarea {
+        @extend .form-control;
+    }
 }
 
 .card-footer {
-  display: flex;
-  justify-content: space-between;
-  a {
-    @extend .btn, .btn-primary, .btn-sm;
-    + a {
-      @extend .btn-secondary;
+    display: flex;
+    justify-content: space-between;
+
+    a {
+        @extend .btn, .btn-primary, .btn-sm;
+
+        + a {
+            @extend .btn-secondary;
+        }
     }
-  }
 }
 
 .post {
-  margin-bottom: 2rem;
+    margin-bottom: 2rem;
 }
 
 .edit {
-  font-family: 'Caveat Brush', cursive;
-  background: #FFC39F;
-  min-height: 8em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    font-family: 'Caveat Brush', cursive;
+    background: #FFC39F;
+    min-height: 8em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  .form {
-    label {
-      color: #d9534f;
+    .form {
+        label {
+            color: #d9534f;
+        }
+        flex: 2 2 auto;
+        max-width: 20em;
     }
-    flex: 2 2 auto;
-    max-width: 20em;
-  }
 }
 
 .p_body {
-  text-align: center;
-  margin: auto;
-  font-family: 'Caveat Brush', cursive;
+    text-align: center;
+    margin: auto;
+    font-family: 'Caveat Brush', cursive;
 }
 
-.comment-container, .p_comment {
-  display: flex;
-  flex-direction: column-reverse;
-  font-family: 'Caveat Brush', cursive;
-
+.comment-container,
+.p_comment {
+    display: flex;
+    flex-direction: column-reverse;
+    font-family: 'Caveat Brush', cursive;
 }
-
 
 a.back-btn {
-  position: absolute;
-  background: rgba(white,0.2);
-  top: 5rem;
-  left: 4rem;
-  display: block;
-  width: 3rem;
-  height: 3rem;
-  border-radius: 5000em;
-  z-index: 250;
-  color: #000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Back_Arrow.svg/1024px-Back_Arrow.svg.png');
-  background-size: 50%;
-  background-repeat: no-repeat;
-  background-position: center;
-  transform: all 100ms ease;
-  &:hover {
-    background-color: rgba(white,0.4);
-  }
+    position: absolute;
+    background: rgba(white,0.2);
+    top: 5rem;
+    left: 4rem;
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 5000em;
+    z-index: 250;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Back_Arrow.svg/1024px-Back_Arrow.svg.png');
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: all 100ms ease;
+
+    &:hover {
+        background-color: rgba(white,0.4);
+    }
 }
 
-
 .field_with_errors {
-  &:after {
-    content: 'Required';
-    color: #5bc0de;
-    display: block;
-  }
-  input, textarea {
-    border-color: red;
-  }
+    &:after {
+        content: 'Required';
+        color: #5bc0de;
+        display: block;
+    }
+
+    input,
+    textarea {
+        border-color: red;
+    }
 }

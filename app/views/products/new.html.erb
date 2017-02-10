@@ -1,26 +1,26 @@
 <div class="new_product">
-  <%= form_for @product do |f| %>
+    <%= form_for @product do |f| %>
     <br>
     <h1>Add new product here !</h1>
 
-      <p class="form-group">
+    <p class="form-group">
         <%= f.label :name %>
         <%= f.text_field :name %>
-      </p>
-      <p class="form-group">
+    </p>
+    <p class="form-group">
         <%= f.label :price %>
         <%= f.text_field :price %>
-      </p>
-      <p class="form-group">
+    </p>
+    <p class="form-group">
         <%= f.label :size %>
         <%= f.text_field :size %>
-      </p>
-      <p class="form-group">
+    </p>
+    <p class="form-group">
         <%= f.label :photo %>
         <%= f.text_field :photo %>
-      </p>
-      <p class="form-group">
-         <%= f.submit %>
-      </p>
-  <% end %>
+    </p>
+    <p class="form-group">
+        <%= f.submit %>
+    </p>
+    <% end %>
 </div>

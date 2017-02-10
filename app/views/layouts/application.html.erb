@@ -1,49 +1,55 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Last project</title>
-    <%= csrf_meta_tags %>
+    <head>
+        <title>Last project</title>
+        <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-  </head>
+    </head>
 
-  <body>
+    <body>
 
-<nav class="navbar navbar-default nav_">
-      <div class="container">
+        <nav class="navbar navbar-default nav_">
+            <div class="container">
 
-      <div class="navbar-header">
-        <div class="navbar-brand">
-          <a href="/">| Home | </a>
-          <a href="/products">| Sweatshirts </a>
-          <a href="/products">| Pants </a>
-          <a href="/products">| Swim </a>
-          <a href="/products">| Dress & Skirts </a>
-          <a href="/products">| Shoes |</a>
+                <div class="navbar-header">
+                    <div class="navbar-brand">
+                        <a href="/">| Home |
+                        </a>
+                        <a href="/products">| Sweatshirts
+                        </a>
+                        <a href="/products">| Pants
+                        </a>
+                        <a href="/products">| Swim
+                        </a>
+                        <a href="/products">| Dress & Skirts
+                        </a>
+                        <a href="/products">| Shoes |</a>
 
-        </div>
+                    </div>
 
-        <div class="right">
-          <% if session[:user_id] %>
-          User : <%= current_user.name %> |
-          <%= link_to cart_path do%>
-           My Cart |
-         <%end%>
-          <%= link_to 'Log out |', session_path(current_user), method: 'delete' %>
+                    <div class="right">
+                        <% if session[:user_id] %>
+                        User :
+                        <%= current_user.name %>
+                        |
+                        <%= link_to cart_path do%>
+                        My Cart |
+                        <%end%>
+                        <%= link_to 'Log out |', session_path(current_user), method: 'delete' %>
 
-          <% else %>
-          <%= link_to 'Log in |', new_session_path %>
-          <%= link_to 'Sign up |', new_user_path %>
-          <% end %>
-        </div>
+                    <% else %>
+                        <%= link_to 'Log in |', new_session_path %>
+                        <%= link_to 'Sign up |', new_user_path %>
+                        <% end %>
+                    </div>
 
-      </div>
-    </div>
-  </nav>
+                </div>
+            </div>
+        </nav>
 
-
-    <%= yield %>
-  </body>
+        <%= yield %>
+    </body>
 </html>

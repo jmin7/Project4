@@ -2,47 +2,49 @@
 
 <div id="product"></div>
 <section class="each_product">
-  <header class="each_product__hero" style="background-image: url('<%= @product.photo %>'); ">
-  </header>
-  <div class="each_product__hero-inner">
-    <h1><%= @product.name %></h1>
-  </div>
+    <header class="each_product__hero" style="background-image: url('<%= @product.photo %>'); "></header>
+    <div class="each_product__hero-inner">
+        <p class="product_name"><%= @product.name %></p>
+    </div>
 
-  <div class="each_product__hero-overlay"></div>
+    <div class="each_product__hero-overlay"></div>
 </section>
 
 <section class="each_product">
 
     <div class="p_body">
-      <h1><%= @product.name %></h1>
-      <h3>Price : $ <%= @product.price %></h3>
-      <h3>Size : <%= @product.size %></h3>
-      <br>
-      <button class: 'btn btn-sm btn-primary'>Add to shopping cart </button>
-      <br><br>
-      <p class="text-muted mb-4">See details for <%= @product.name %>.</p>
+        <h1><%= @product.name %></h1>
+        <h3>Price : $
+            <%= @product.price %></h3>
+        <h3>Size :
+            <%= @product.size %></h3>
+        <br>
+        <button class: 'btn btn-sm btn-primary'>Add to shopping cart
+        </button>
+        <br><br>
+        <h5>See details for
+            <%= @product.name %>.</h5><br>
     </div>
-    <center><img src='<%= @product.photo %>' height="600px" width="600px"></center>
+    <center><img src='<%= @product.photo %>' height="600px" width="500px"></center>
     <br>
 
     <div class="container">
-      <div class="row">
-        <div class="col-md-8">
-            <%= flash[:alert] %>
-            <br>
-          <div class="comment-container">
-            <%= render @product.comments %>
-          </div>
+        <div class="row">
+            <div class="col-md-8">
+                <%= flash[:alert] %>
+                <br>
+                <div class="comment-container">
+                    <%= render @product.comments %>
+                </div>
 
+            </div>
+
+            <div class="col-md-8 p_comment">
+                <% if session[:user_id] %>
+                <%= render 'comments/form' %>
+                <% end %>
+            </div>
         </div>
-
-
-      <div class="col-md-8 p_comment">
-        <% if session[:user_id] %>
-        <%= render 'comments/form' %>
-        <% end %>
-      </div>
     </div>
-  </div>
 
 </section>

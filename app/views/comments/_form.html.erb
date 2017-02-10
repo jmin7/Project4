@@ -1,19 +1,19 @@
-
-
 <%= form_for([@product, @product.comments.build], :html => {:class => 'form'}, validate: true) do |f| %>
 
-    <h2>Tell us about <%= @product.name %>!</h2>
-    <p class="text-muted mb-4">Tell other travelers about your favorite places and off-the-beaten-path adventures. </p>
+<h2>Tell us about
+    <%= @product.name %>!</h2>
+<p class="text-muted mb-4">Tell other travelers about your favorite places and off-the-beaten-path adventures.
+</p>
 
-      <p class="form-group">
-        <%= f.text_field :title, placeholder: "Enter a title." %>
-      </p>
-      <p class="form-group">
-        <%= f.text_area :body, placeholder: "How was it?" %>
-      </p>
-      <p class="form-group">
-    
-         <%= f.submit %>
-      </p>
+<p class="form-group">
+    <%= f.text_field :title, placeholder: "Enter a title." %>
+</p>
+<p class="form-group">
+    <%= f.text_area :body, placeholder: "How was it?" %>
+</p>
+<p class="form-group">
+
+    <%= f.submit %>
+</p>
 
 <% end %>
