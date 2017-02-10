@@ -8,7 +8,9 @@
 
 Product.destroy_all
 
-Product.create(name: "Pale Green Patchwork Print", price: 15, size: "Medium", photo: "http://img.romwe.com/images/romwe.com/201610/1476753583777691774.jpg")
-Product.create(name: "Seattle", price: 30, size: "Small", photo: "http://www.bekinsmovingandstorage.com/wp-content/uploads/2016/03/SeattleCity2.jpg")
-Product.create(name: "Cool City 22 ", price: 25, size: "Free", photo: "http://www.dentons.com/~/media/Images/Website/Background%20Images/Offices/Atlanta/Atlanta_2.jpg")
-Product.create(name: "Test product", price: 100, size: "Medium", photo: "http://www.bekinsmovingandstorage.com/wp-content/uploads/2016/03/SeattleCity2.jpg")
+Product.create(name: "Pale Green Patchwork Print", price: 15, size: "Small / Medium / Large", photo: "http://img.romwe.com/images/romwe.com/201610/1476753583777691774.jpg")
+Product.create(name: "Burgundy Alien Embroidered Crop", price: 30, size: "Small / Medium / Large", photo: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRM7-uq0tUA-1PMPJIVe6wMd6mpoIj160ejiMoGKRyr1pGh7Zi0Lg")
+Product.create(name: "Black Slogan Print", price: 25, size: "Medium / Large", photo: "http://img.romwe.com/images/201701/1485149231262197337.jpg")
+Product.create(name: "Heather Grey Contrast Striped", price: 50, size: "Small / Medium ", photo: "http://img.romwe.com/images/romwe.com/201609/1473123119503280051.jpg")
+Product.create(name: "Grey Bow Embellished Crew Neck", price: 20, size: "Small / Medium", photo: "http://img.romwe.com/images/romwe.com/201609/1474247257168743519.jpg")
+Product.create(name: "Black Letter Lace Up Front", price: 17, size: "Medium", photo: "http://img.romwe.com/images/romwe.com/201609/1473671223945504267.jpg")
