@@ -1,29 +1,42 @@
 <section>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 landing">
-      <h1>SWEATSHIRTS </h1>
-      </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 landing">
+                <h1>SWEATSHIRTS
+                </h1>
+            </div>
+        </div>
     </div>
-  </div>
 </section>
 
-<section class="products" >
-  <div class="container">
-    <div class="row">
-      <% @products.each do |product| %>
-          <div class="col-md-4">
-            <%= link_to(product_path(product)) do %>
+<section class="products">
+    <div class="container">
+        <div class="row">
+
+            <% @products.each do |product| %>
+            <div class="col-md-4">
+                <%= link_to(product_path(product)) do %>
                 <div class="card">
-                  <div class="card-bg-img" style="background-image: url('<%= product.photo %>');">
-                  </div>
-                  <div class="card-block">
-                    <p class="product_index_name"><%= product.name %></p>
-                  </div>
+                    <div class="card-bg-img" style="background-image: url('<%= product.photo %>');"></div>
+                    <div class="card-block">
+                        <p class="product_index_name"><%= product.name %></p>
+                    </div>
                 </div>
+                <% end %>
+            </div>
             <% end %>
+
+            <% if session[:user_id] %>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-bg-img" style="background-color: white"></div>
+                    <div class="card-block">
+                      <p class="product_index_name"><%= link_to 'Add new product', new_product_path %></p>
+                    </div>
+                </div>
+              </div>
+              <% end %>
+
           </div>
-      <% end %>
-    </div>
-  </div>
-</section>
+        </div>
+  </section>
