@@ -14,19 +14,24 @@
 
     <div class="p_body">
         <h1><%= @product.name %></h1>
-        <h3>Price : $
-            <%= @product.price %></h3>
         <h3>Size :
             <%= @product.size %></h3>
+        <h3>Price : $
+            <%= @product.price %></h3>
         <br>
         <button class: 'btn btn-sm btn-primary'>Add to bag</button>
-        <br><br><br><br>
+        <br><br><br>
         <h5>See details for
-            <%= @product.name %>.</h5><br>
-    </div>
-    <center><img src='<%= @product.photo %>' height="600px" width="500px"></center>
-    <br>
+            <%= @product.name %>.</h5>
 
+        <br>
+        <center><img src='<%= @product.photo %>' height="600px" width="500px"></center>
+        <br>
+        <h5>
+            @ Please Log in or Sign up to leave comment @
+        </h5>
+    </div>
+    <br>
     <div class="container">
         <div class="row">
             <div class="col-md-8">

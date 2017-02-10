@@ -8,14 +8,7 @@ class UsersController < ApplicationController
                 password: params[:password],
                 password_confirmation: params[:password_confirmation])
 
-      if User.password != User.password_confirmation
-        flash[:alert] = 'Password is not matching. Please try again'
-        redirect_to new_user_path
-
-
-      else
-        redirect_to '/'
-      end
+      redirect_to '/'
     end
 
   def cart_count

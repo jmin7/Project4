@@ -17,7 +17,7 @@ $link-decoration: none;
 @import "bourbon";
 // google fonts
 @import url( 'https://fonts.googleapis.com/css?family=Barrio|Caveat+Brush|Pacifico');
-@import url( 'https://fonts.googleapis.com/css?family=Righteous');
+@import url( 'https://fonts.googleapis.com/css?family=Economica|Righteous');
 
 a:link {
     color: black;
@@ -44,7 +44,7 @@ html {
 }
 
 .nav_ {
-    font-family: 'Caveat Brush', cursive;
+  font-family: 'Economica', sans-serif;
 
     .right {
         float: right;
@@ -127,24 +127,36 @@ html {
     }
 }
 
-.product_index_name {
+.card {
+  margin-bottom: 10px;
+
+  .product_index_name {
     font-size: 2em;
     font-color: black;
     font-family: 'Caveat Brush', cursive;
     text-align: center;
-}
+  }
 
-.card-bg-img {
-    background-size: contain;;
+  .card-bg-img-wel {
+    background-size: cover;
     height: 12rem;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     background-position: center;
-}
+  }
 
-.card-block {
+
+  .card-bg-img {
+    background-size: contain;
+    height: 12rem;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-position: center;
+  }
+
+  .card-block {
   height: 8em;
-  border: 1px solid grey;
+  }
 }
 
 .each_product {
