@@ -15,5 +15,3 @@ Product.create(name: "Heather Grey Contrast Striped", price: 50, size: "Small / 
 Product.create(name: "Grey Bow Embellished Crew Neck", price: 20, size: "Small / Medium", photo: "http://img.romwe.com/images/romwe.com/201609/1474247257168743519.jpg")
 Product.create(name: "Black Letter Lace Up Front", price: 17, size: "Medium", photo: "http://img.romwe.com/images/romwe.com/201609/1473671223945504267.jpg")
 Product.create(name: "Orange Crew Neck", price: 10, size: "Small / Medium", photo: "http://img.romwe.com/images/romwe.com/201609/1473383160550650717.jpg")
-
-User.create(name: "Jungmin", email: "jm@jmin.com", password: 1234)
