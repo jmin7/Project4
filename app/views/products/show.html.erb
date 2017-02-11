@@ -29,7 +29,8 @@
             data: {confirm: 'Deleting...'}%>
         <% end %>
 
-        <button class: 'btn btn-sm btn-primary'>Add to bag</button>
+        <%= link_to 'Add to bag', cart_path,
+            class: 'btn btn-sm btn-secondary'%>
 
         <br><br><br>
         <h4>See details for
