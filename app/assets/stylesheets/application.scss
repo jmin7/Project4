@@ -66,24 +66,17 @@ html {
     background-position: top;
     background-size: contain;
     color: black;
-    margin: 0;
 
     h1, h3 {
         font-family: 'Righteous', cursive;
     }
 }
 
-.welcome, .product {
-  margin-top: 0;
-}
-
 .landing {
     // background-image: url("http://i394.photobucket.com/albums/pp26/billybill171/red-black-white-stripes-1.jpg");
-    background-image: url("https://img.clipartfox.com/dede465a18c5c7f2668da885be7194e1_gray-and-white-horizontal-black-and-white-striped-clipart_800-600.jpeg");
+    // background-image: url("https://img.clipartfox.com/dede465a18c5c7f2668da885be7194e1_gray-and-white-horizontal-black-and-white-striped-clipart_800-600.jpeg");
     background-image: url("https://s-media-cache-ak0.pinimg.com/564x/6f/a2/81/6fa281a8f9243a4a15efdcb11d453658.jpg");
 
-
-    margin: 0;
     color: black;
     text-shadow: 4px 0 white;
 
@@ -92,14 +85,11 @@ html {
     }
 }
 
-.container_top {
-  margin: 0;
-}
 
 .landing,
 .root {
     margin-top: 10px;
-    height: 30vh;
+    height: 25vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -171,14 +161,14 @@ html {
 
 .each_product {
     position: relative;
-    margin: 0 0 4rem;
+    margin: 10px 0 2em 0;
 
     &__hero {
         position: relative;
         background-size: cover;
         background-position: center center;
-        min-height: 40vh;
-        filter: grayscale(50%);
+        min-height: 25vh;
+        filter: grayscale(30%);
         z-index: 100;
     }
 
@@ -187,7 +177,7 @@ html {
         top: 0;
         left: 0;
         right: 0;
-        min-height: 40vh;
+        min-height: 25vh;
         pointer-events: none;
         background-image: linear-gradient(to top, #ff5b77, darken(#ff5b77, 18%));
         opacity: 0.92;
