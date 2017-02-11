@@ -31,12 +31,14 @@
                     </div>
 
                     <div class="right">
-                        <% if session[:user_id] %>
-                        User :
-                        <%= current_user.name %> |
-                        <%= link_to 'My bag |', cart_path %>
-
-                        <%= link_to 'Log out |', session_path(current_user), method: 'delete' %>
+                      <% if session[:user_id] %>
+                     User :
+                     <%= current_user.name %>
+                     |
+                     <%= link_to cart_path do%>
+                     My Bag |
+                     <%end%>
+                     <%= link_to 'Log out |', session_path(current_user), method: 'delete' %>
 
                         <% else %>
                         <%= link_to 'Log in |', new_session_path %>
