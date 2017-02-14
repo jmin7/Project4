@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Product.destroy_all
+User.destroy_all
 
 Product.create(name: "Pale Green Patchwork Print", price: 15, size: "Small / Medium / Large", photo: "http://img.romwe.com/images/romwe.com/201610/1476753583777691774.jpg")
 Product.create(name: "Heather Grey Contrast Striped", price: 50, size: "Small / Medium ", photo: "http://img.romwe.com/images/romwe.com/201609/1473123119503280051.jpg")
