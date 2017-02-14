@@ -18,7 +18,7 @@
             <%= @product.price %></h3>
         <br>
 
-        <% if @user && @user.id == 5 %>
+        <% if @user && @user.id == 1 %>
         <%= link_to 'Edit', edit_product_path(@product),
             class: 'btn btn-sm btn-secondary'%>
         <%= link_to 'Remove', product_path(@product),
